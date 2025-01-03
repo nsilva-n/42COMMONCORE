@@ -1,0 +1,53 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf_i.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nsilva-n <nsilva-n@student.42lisboa.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/18 15:44:57 by nsilva-n          #+#    #+#             */
+/*   Updated: 2024/11/21 13:27:21 by nsilva-n         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_printf.h"
+
+static void	ft_put_i(int n)
+{
+	if (n == -2147483648)
+	{
+		ft_printf_c('-');
+		ft_printf_c('2');
+		ft_put_i(147483648);
+	}
+	else if (n < 0)
+	{
+		ft_printf_c('-');
+		ft_put_i(-n);
+	}
+	else if (n > 9)
+	{
+		ft_put_i(n / 10);
+		ft_put_i(n % 10);
+	}
+	else
+		ft_printf_c(n + '0');
+}
+
+int	ft_printf_i(int n)
+{
+	int	len;
+
+	len = 0;
+	if (n < 0)
+		len++;
+	ft_put_i(n);
+	if (n == 0)
+		return (1);
+	while (n != 0)
+	{
+		len++;
+		n /= 10;
+	}
+	return (len);
+}
