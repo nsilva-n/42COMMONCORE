@@ -6,7 +6,7 @@
 /*   By: nsilva-n <nsilva-n@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 16:40:35 by nsilva-n          #+#    #+#             */
-/*   Updated: 2024/12/30 15:41:15 by nsilva-n         ###   ########.fr       */
+/*   Updated: 2025/01/06 12:32:10 by nsilva-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "./lib/libft/libft.h"
 # include <sys/wait.h>
+# include <errno.h>
 
 void	ft_child(char **av, int *p_fd, char **env);
 void	ft_execute(char *cmd, char **env);

@@ -6,7 +6,7 @@
 /*   By: nsilva-n <nsilva-n@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 13:28:10 by nsilva-n          #+#    #+#             */
-/*   Updated: 2024/12/30 16:08:09 by nsilva-n         ###   ########.fr       */
+/*   Updated: 2025/01/06 16:10:21 by nsilva-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ char	*ft_get_path(char *cmd, char **env)
 			break ;
 	all_paths = ft_split(env[i] + 5, ':');
 	split_cmd = ft_split(cmd, ' ');
-	if (!all_paths | !split_cmd)
-		exit((ft_printf_fd(2, "Split error") * 0) + 1);
+	if (!all_paths || !split_cmd)
+		exit((ft_printf_fd(2, "Malloc failed\n") * 0) + EXIT_FAILURE);
 	i = -1;
 	while (all_paths[++i])
 	{
