@@ -6,7 +6,7 @@
 /*   By: nsilva-n <nsilva-n@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 15:23:43 by nsilva-n          #+#    #+#             */
-/*   Updated: 2025/01/06 16:05:05 by nsilva-n         ###   ########.fr       */
+/*   Updated: 2025/01/10 14:49:14 by nsilva-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ int	ft_ver_map(t_data *frame)
 			else if (pos == 'E')
 				frame->exit++;
 			else if (pos != '0' && pos != '1')
-				return (ft_map_free(frame),
-					write(2, "Ha!\n(Wrong character)\n", 22) * 0);
+				return (ft_map_free(frame), write(2, "Uh!\n(Chars)\n", 12) * 0);
 		}
 	}
 	if (frame->player != 1 || frame->exit != 1 || frame->collect < 1)
-		return (write(2, "Hee-hee!\n(Check P, E and Cs)\n", 29) * 0);
+		return (ft_map_free(frame),
+			write(2, "Hee-hee!\n(Check P, E and Cs)\n", 29) * 0);
 	return (1);
 }

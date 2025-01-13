@@ -6,7 +6,7 @@
 /*   By: nsilva-n <nsilva-n@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 16:09:53 by nsilva-n          #+#    #+#             */
-/*   Updated: 2025/01/03 12:56:35 by nsilva-n         ###   ########.fr       */
+/*   Updated: 2025/01/10 13:53:24 by nsilva-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,19 @@ int	ft_swap(t_stack **stack)
 	return (1);
 }
 
-void	sa(t_stack **stack)
+void	ft_sa(t_stack **stack)
 {
 	if (ft_swap(stack))
 		ft_putstr_fd("sa\n", 1);
 }
 
-void	sb(t_stack **stack)
+void	ft_sb(t_stack **stack)
 {
 	if (ft_swap(stack))
 		ft_putstr_fd("sb\n", 1);
 }
 
-void	ss(t_stack **a_stack, t_stack **b_stack)
+void	ft_ss(t_stack **a_stack, t_stack **b_stack)
 {
 	if (ft_swap(a_stack) && ft_swap(b_stack))
 		ft_putstr_fd("ss\n", 1);
