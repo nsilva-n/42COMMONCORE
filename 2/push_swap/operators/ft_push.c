@@ -6,7 +6,7 @@
 /*   By: nsilva-n <nsilva-n@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 16:05:35 by nsilva-n          #+#    #+#             */
-/*   Updated: 2025/01/10 15:01:43 by nsilva-n         ###   ########.fr       */
+/*   Updated: 2025/02/06 13:26:17 by nsilva-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_push(t_stack **src, t_stack **dest)
 {
 	t_stack	*temp;
 
-	if (!*src)
+	if (!*dest)
 		return (0);
 	temp = *src;
 	*src = *dest;
@@ -33,6 +33,6 @@ void	ft_pa(t_stack **src, t_stack **dest)
 
 void	ft_pb(t_stack **src, t_stack **dest)
 {
-	if (ft_push(src, dest))
+	if (ft_push(dest, src))
 		ft_putstr_fd("pb\n", 1);
 }

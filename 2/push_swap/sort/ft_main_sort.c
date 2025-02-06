@@ -6,7 +6,7 @@
 /*   By: nsilva-n <nsilva-n@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 13:37:33 by nsilva-n          #+#    #+#             */
-/*   Updated: 2025/01/10 13:53:41 by nsilva-n         ###   ########.fr       */
+/*   Updated: 2025/02/06 12:25:30 by nsilva-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 void	ft_main_sort(t_stack **a_stack)
 {
 	t_stack	*b_stack;
-	int		i;
+	size_t	i;
 
 	b_stack = NULL;
-	if (ft_stack_size(a_stack) == 2)
+	if (ft_stack_size(*a_stack) == 2)
 		ft_sa(a_stack);
 	else
 	{

@@ -5,24 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsilva-n <nsilva-n@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/03 13:51:52 by nsilva-n          #+#    #+#             */
-/*   Updated: 2025/01/03 14:02:03 by nsilva-n         ###   ########.fr       */
+/*   Created: 2025/02/03 16:23:29 by nsilva-n          #+#    #+#             */
+/*   Updated: 2025/02/05 13:01:33 by nsilva-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-t_stack	*ft_parse_single(char *str)
+t_stack	*ft_parse_single(char **av)
 {
-	char	**a_split;
-	int		i;
-	t_stack	*a_stack;
+	t_stack		*a_stack;
+	char		**temp;
+	long int	i;
 
-	a_split = ft_split(str, ' ');
+	a_stack = NULL;
+	temp = ft_split(av[1], ' ');
 	i = -1;
-	if (!a_split)
+	if (!temp)
 		return (NULL);
-	while (a_split[++i])
-		a_stack = ft_stack_addback(a_stack, ft_stack_new(ft_atoi(a_split[i])));
+	ft_parse_stack(temp, &a_stack);
+	while (temp[++i])
+		free(temp[i]);
+	free(temp);
 	return (a_stack);
 }
