@@ -6,7 +6,7 @@
 /*   By: nsilva-n <nsilva-n@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 13:52:57 by nsilva-n          #+#    #+#             */
-/*   Updated: 2025/02/06 14:20:35 by nsilva-n         ###   ########.fr       */
+/*   Updated: 2025/02/09 18:41:10 by nsilva-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int	ft_search_loop(t_stack *stack, int n, char s)
 			i++;
 		}
 	}
+
 	return (i);
 }
 

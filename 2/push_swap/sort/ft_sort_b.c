@@ -6,7 +6,7 @@
 /*   By: nsilva-n <nsilva-n@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 13:49:43 by nsilva-n          #+#    #+#             */
-/*   Updated: 2025/02/06 14:35:52 by nsilva-n         ###   ########.fr       */
+/*   Updated: 2025/02/09 18:41:06 by nsilva-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_sort_b_to_three(t_stack **a_stack, t_stack **b_stack)
 	{
 		temp = *a_stack;
 		i = ft_sort_rotate(*a_stack, *b_stack, 'a');
-		while (i)
+		while (i >= 0)
 		{
 			if (i == ft_sort_israrb(*a_stack, *b_stack, temp->number, 'a'))
 				i = ft_sort_rarb(a_stack, b_stack, temp->number, 'a');

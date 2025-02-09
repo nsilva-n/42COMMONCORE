@@ -19,19 +19,19 @@ int	ft_sort_isrrarrb(t_stack *src, t_stack *dest, int n, char stack)
 	i = 0;
 	if (stack == 'a')
 	{
-		if (ft_main_search(src, n, stack))
-			i = ft_stack_size(src) - ft_main_search(src, n, stack);
-		if (i < ft_stack_size(dest) - ft_stack_index(dest, n)
-			&& ft_stack_index(dest, n))
-			i = ft_stack_size(dest) - ft_stack_index(dest, n);
-	}
-	else
-	{
-		if (ft_main_search(dest, n, stack))
-			i = ft_stack_size(dest) - ft_main_search(dest, n, stack);
+		if (ft_main_search(dest, n, 'b'))
+			i = ft_stack_size(dest) - ft_main_search(dest, n, 'b');
 		if (i < ft_stack_size(src) - ft_stack_index(src, n)
 			&& ft_stack_index(src, n))
 			i = ft_stack_size(src) - ft_stack_index(src, n);
+	}
+	else
+	{
+		if (ft_main_search(src, n, 'a'))
+			i = ft_stack_size(src) - ft_main_search(src, n, 'a');
+		if (i < ft_stack_size(dest) - ft_stack_index(dest, n)
+			&& ft_stack_index(dest, n))
+			i = ft_stack_size(dest) - ft_stack_index(dest, n);
 	}
 	return (i);
 }
@@ -58,5 +58,5 @@ int	ft_sort_rrarrb(t_stack **a_stack, t_stack **b_stack, int n, char stack)
 			ft_rra(a_stack);
 		ft_pa(a_stack, b_stack);
 	}
-	return (0);
+	return (-1);
 }

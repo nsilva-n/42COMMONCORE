@@ -6,7 +6,7 @@
 /*   By: nsilva-n <nsilva-n@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:34:24 by nsilva-n          #+#    #+#             */
-/*   Updated: 2025/02/06 14:21:37 by nsilva-n         ###   ########.fr       */
+/*   Updated: 2025/02/07 11:39:13 by nsilva-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,14 @@ int	ft_sort_rotate(t_stack *src, t_stack *dest, char stack)
 	int		i;
 	t_stack	*temp;
 
-	temp = dest;
 	if (stack == 'a')
-		i = ft_sort_isrrarrb(src, dest, dest->number, stack);
-	else
-		i = ft_sort_isrrarrb(src, dest, src->number, stack);
+		temp = src;
+	if (stack == 'a')
+		i = ft_sort_isrrarrb(src, dest, src->number, 'a');
+	if (stack == 'b')
+		temp = dest;
+	if (stack == 'b')
+		i = ft_sort_isrrarrb(src, dest, dest->number, 'b');
 	while (temp)
 	{
 		if (i > ft_sort_israrb(src, dest, temp->number, stack))

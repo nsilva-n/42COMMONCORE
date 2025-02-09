@@ -6,7 +6,7 @@
 /*   By: nsilva-n <nsilva-n@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 16:09:32 by nsilva-n          #+#    #+#             */
-/*   Updated: 2025/02/05 12:55:42 by nsilva-n         ###   ########.fr       */
+/*   Updated: 2025/02/07 12:43:32 by nsilva-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_rrotate(t_stack **stack)
 	while ((*stack)->next && ++i >= 0)
 		*stack = (*stack)->next;
 	(*stack)->next = temp;
-	while (--i + 1 > 1)
+	while (--i > 0)
 		temp = temp->next;
 	temp->next = NULL;
 	return (1);
