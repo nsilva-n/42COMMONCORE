@@ -6,7 +6,7 @@
 /*   By: nsilva-n <nsilva-n@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 14:33:51 by nsilva-n          #+#    #+#             */
-/*   Updated: 2025/02/09 18:41:18 by nsilva-n         ###   ########.fr       */
+/*   Updated: 2025/02/10 13:45:03 by nsilva-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,18 @@ int	ft_sort_israrb(t_stack *src, t_stack *dest, int n, char stack)
 
 	if (stack == 'a')
 	{
-		if (ft_main_search(dest, n, 'b') < ft_stack_index(src, n))
+		i = ft_main_search(dest, n, 'b');
+		if (i < ft_stack_index(src, n))
 			return (ft_stack_index(src, n));
-		return (ft_main_search(src, n, stack));
+		return (i);
 	}
-	if (ft_main_search(src, n, 'a') < ft_stack_index(dest, n))
-		return (ft_stack_index(dest, n));
-	return (ft_main_search(src, n, 'a'));
+	else
+	{
+		i = ft_main_search(src, n, 'a');
+		if (i < ft_stack_index(dest, n))
+			return (ft_stack_index(dest, n));
+		return (i);
+	}
 }
 
 int	ft_sort_rarb(t_stack **a_stack, t_stack **b_stack, int n, char stack)

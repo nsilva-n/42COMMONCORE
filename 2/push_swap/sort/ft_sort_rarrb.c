@@ -6,7 +6,7 @@
 /*   By: nsilva-n <nsilva-n@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:00:47 by nsilva-n          #+#    #+#             */
-/*   Updated: 2025/02/09 16:35:49 by nsilva-n         ###   ########.fr       */
+/*   Updated: 2025/02/10 12:48:27 by nsilva-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,17 @@ int	ft_sort_israrrb(t_stack *src, t_stack *dest, int n, char stack)
 	i = 0;
 	if (stack == 'a')
 	{
-		if (ft_stack_index(src, n))
-			i = ft_stack_size(src) - ft_stack_index(src, n);
-		return (i + ft_main_search(dest, n, 'b'));
+		if (ft_main_search(dest, n, 'b'))
+			i = ft_stack_size(dest) - ft_main_search(dest, n, 'b');
+		i = ft_stack_index(src, n) + i;
+		return (i);
 	}
-	if (ft_stack_index(dest, n))
-		i = ft_stack_size(dest) - ft_stack_index(dest, n);
-	return (i + ft_main_search(src, n, 'a'));
+	else
+	{
+		if (ft_stack_index(dest, n))
+			i = ft_stack_size(dest) - ft_stack_index(dest, n);
+		return (i + ft_main_search(src, n, 'a'));
+	}
 }
 
 int	ft_sort_rarrb(t_stack **a_stack, t_stack **b_stack, int n, char stack)

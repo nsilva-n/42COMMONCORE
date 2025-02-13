@@ -21,7 +21,7 @@ int	ft_sort_isrrarrb(t_stack *src, t_stack *dest, int n, char stack)
 	{
 		if (ft_main_search(dest, n, 'b'))
 			i = ft_stack_size(dest) - ft_main_search(dest, n, 'b');
-		if (i < ft_stack_size(src) - ft_stack_index(src, n)
+		if ((i < (ft_stack_size(src) - ft_stack_index(src, n)))
 			&& ft_stack_index(src, n))
 			i = ft_stack_size(src) - ft_stack_index(src, n);
 	}
@@ -29,7 +29,7 @@ int	ft_sort_isrrarrb(t_stack *src, t_stack *dest, int n, char stack)
 	{
 		if (ft_main_search(src, n, 'a'))
 			i = ft_stack_size(src) - ft_main_search(src, n, 'a');
-		if (i < ft_stack_size(dest) - ft_stack_index(dest, n)
+		if ((i < (ft_stack_size(dest) - ft_stack_index(dest, n)))
 			&& ft_stack_index(dest, n))
 			i = ft_stack_size(dest) - ft_stack_index(dest, n);
 	}

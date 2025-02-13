@@ -6,7 +6,7 @@
 /*   By: nsilva-n <nsilva-n@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 13:55:32 by nsilva-n          #+#    #+#             */
-/*   Updated: 2025/02/06 12:38:44 by nsilva-n         ###   ########.fr       */
+/*   Updated: 2025/02/10 14:51:14 by nsilva-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,6 @@ typedef struct s_stack
 }					t_stack;
 
 void	ft_exit(t_stack **stack, int errnumb);
-
-// ERROR
-
-char	*ft_error_index(int errnumb);
 
 // OPERATORS
 
@@ -49,7 +45,7 @@ void	ft_ss(t_stack **a_stack, t_stack **b_stack);
 // PARSING
 
 t_stack	*ft_main_parse(int ac, char **av);
-int		ft_parse_atoi(const char *str, t_stack **a_stack);
+int		ft_parse_atoi_ps(const char *str, t_stack *a_stack);
 t_stack	*ft_parse_single(char **av);
 void	ft_parse_stack(char **av, t_stack **a_stack);
 
@@ -84,10 +80,12 @@ t_stack	*ft_stack_last(t_stack *stack);
 int		ft_stack_max(t_stack *stack);
 int		ft_stack_min(t_stack *stack);
 t_stack	*ft_stack_new(int content);
-size_t	ft_stack_size(t_stack *stack);
+int		ft_stack_size(t_stack *stack);
 
 // VERIFIERS
 int		ft_ver_chars(char *str);
+int		ft_ver_minplus(char *str);
+int		ft_ver_quotes(char *str);
 int		ft_ver_repeated(t_stack *stack);
 int		ft_ver_sorted(t_stack *a_stack);
 

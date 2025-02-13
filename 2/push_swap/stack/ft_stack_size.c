@@ -6,15 +6,15 @@
 /*   By: nsilva-n <nsilva-n@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 13:39:34 by nsilva-n          #+#    #+#             */
-/*   Updated: 2025/02/07 11:40:38 by nsilva-n         ###   ########.fr       */
+/*   Updated: 2025/02/10 14:07:39 by nsilva-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-size_t	ft_stack_size(t_stack *stack)
+int	ft_stack_size(t_stack *stack)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	while (stack)

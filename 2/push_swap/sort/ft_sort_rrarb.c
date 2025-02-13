@@ -21,13 +21,15 @@ int	ft_sort_isrrarb(t_stack *src, t_stack *dest, int n, char stack)
 	{
 		if (ft_stack_index(src, n))
 			i = ft_stack_size(src) - ft_stack_index(src, n);
-		return (i + ft_main_search(dest, n, 'b'));
+		i = ft_main_search(dest, n, 'b') + i;
+		return (i);
 	}
 	else
 	{
 		if (ft_main_search(src, n, 'a'))
 			i = ft_stack_size(src) - ft_main_search(src, n, 'a');
-		return (i + ft_stack_index(dest, n));
+		i = ft_stack_index(dest, n) + i;
+		return (i);
 	}
 }
 
