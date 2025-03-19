@@ -13,6 +13,7 @@ Oh noble navigator of code, welcome to the repository of **42COMMONCORE**! Withi
   - [Push Swap](#push-swap)
   - [So Long](#so-long)
   - [Pipex](#pipex)
+  - [Philosophers](#philosophers)
 - [Requirements](#requirements)
   - [General Requirements](#general-requirements)
   - [Project-Specific Requirements](#project-specific-requirements)
@@ -53,6 +54,10 @@ Craft a small yet enchanting 2D game using MinilibX. This task will test your pr
 ### Pipex
 Reenact the legendary pipe (`|`) function in bash, exploring the creation of processes, the communication between them, and the management of file descriptors.
 - **Directory:** `2/pipex`
+
+### Philosophers
+Delve into the time-honored problem of dining philosophers, a tale of concurrency and resource sharing. Here, threads and mutexes shall be your tools to ensure that no philosopher starves and no deadlock occurs.
+- **Directory:** `3/philosophers`
 
 ## Requirements
 
