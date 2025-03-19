@@ -6,7 +6,7 @@
 /*   By: nsilva-n <nsilva-n@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 12:14:35 by nsilva-n          #+#    #+#             */
-/*   Updated: 2024/12/30 16:17:43 by nsilva-n         ###   ########.fr       */
+/*   Updated: 2025/03/10 13:41:00 by nsilva-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,7 +111,7 @@ static int	ft_print_triage(const char *to_print, va_list lst, int fd)
 	return (len);
 }
 
-int	ft_printf_fd(int fd, char *to_print, ...)
+int	ft_fprintf(int fd, char *to_print, ...)
 {
 	va_list	lst;
 	int		len;

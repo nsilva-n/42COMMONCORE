@@ -19,6 +19,8 @@ int	ft_parse_args(char **av, t_philo *philo)
 
 	i = -1;
 	c_dead = malloc(sizeof(int));
+	if (!c_dead)
+		return (0);
 	*c_dead = 0;
 	while (++i < ft_atoll(av[1]))
 	{
